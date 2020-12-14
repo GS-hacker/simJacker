@@ -15,4 +15,6 @@ def on_finish(error, response):
         raise error
     print(response)
 
-sms.send("Hello Msg", ["+254793723138"], callback=on_finish)
+message=input("enter a message:")
+number=input("enter a number{+254793723138}:")
+sms.send(message, [number], callback=on_finish)
